@@ -55,11 +55,28 @@
 }
 
 - (void)paymentAuthorizationViewController:(PKPaymentAuthorizationViewController *)controller didAuthorizePayment:(PKPayment *)payment completion:(void (^)(PKPaymentAuthorizationStatus))completion {
-    
+    [self handlePaymentAuthorizationWithPayment:payment completion:completion];
 }
 
 - (void)paymentAuthorizationViewControllerDidFinish:(PKPaymentAuthorizationViewController *)controller {
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)handlePaymentAuthorizationWithPayment:(PKPayment *)payment
+                                   completion:(void (^)(PKPaymentAuthorizationStatus))completion {
+    [Stripe createTokenWithPayment:payment
+                        completion:^(STPToken *token, NSError *error) {
+                            if (error) {
+                                completion(PKPaymentAuthorizationStatusFailure);
+                                return;
+                            }
+                            /*
+                             We'll implement this below in "Sending the token to your server".
+                             Notice that we're passing the completion block through.
+                             See the above comment in didAuthorizePayment to learn why.
+                             */
+                            [self createBackendChargeWithToken:token completion:completion];
+                        }];
 }
 
 @end

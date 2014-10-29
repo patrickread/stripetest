@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PTKView.h"
+#import "BTViewController.h"
 
-@interface PaymentViewController : UIViewController
+@interface PaymentViewController : BTViewController <PTKViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIButton *saveButton;
+@property(weak, nonatomic) PTKView *paymentView;
 
 @end

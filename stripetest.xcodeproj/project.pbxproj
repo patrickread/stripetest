@@ -20,6 +20,7 @@
 		4D1366F61A00934000585875 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1366F51A00934000585875 /* Security.framework */; };
 		4D1366F81A00934500585875 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D1366F71A00934500585875 /* PassKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4DDC6BDC1A01166400A2D013 /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC6BDB1A01166400A2D013 /* PaymentViewController.m */; };
+		4DDC6BDF1A01190300A2D013 /* BTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDC6BDE1A01190300A2D013 /* BTViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		4D1366F71A00934500585875 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		4DDC6BDA1A01166400A2D013 /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentViewController.h; sourceTree = "<group>"; };
 		4DDC6BDB1A01166400A2D013 /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentViewController.m; sourceTree = "<group>"; };
+		4DDC6BDD1A01190300A2D013 /* BTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTViewController.h; sourceTree = "<group>"; };
+		4DDC6BDE1A01190300A2D013 /* BTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTViewController.m; sourceTree = "<group>"; };
 		DD6E76B9BF63B676ABE9187C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF0133BE0F3371B48FE5746B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FF8275811FD6BB643AAAEC83 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,10 +125,12 @@
 				4D1366D61A00359B00585875 /* Main.storyboard */,
 				4D1366D91A00359B00585875 /* Images.xcassets */,
 				4D1366DB1A00359B00585875 /* LaunchScreen.xib */,
-				4D1366D01A00359B00585875 /* stripetest.xcdatamodeld */,
-				4D1366C91A00359B00585875 /* Supporting Files */,
 				4DDC6BDA1A01166400A2D013 /* PaymentViewController.h */,
 				4DDC6BDB1A01166400A2D013 /* PaymentViewController.m */,
+				4D1366D01A00359B00585875 /* stripetest.xcdatamodeld */,
+				4D1366C91A00359B00585875 /* Supporting Files */,
+				4DDC6BDD1A01190300A2D013 /* BTViewController.h */,
+				4DDC6BDE1A01190300A2D013 /* BTViewController.m */,
 			);
 			path = stripetest;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DDC6BDF1A01190300A2D013 /* BTViewController.m in Sources */,
 				4D1366CF1A00359B00585875 /* AppDelegate.m in Sources */,
 				4D1366D21A00359B00585875 /* stripetest.xcdatamodeld in Sources */,
 				4D1366D51A00359B00585875 /* ViewController.m in Sources */,
@@ -436,7 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = stripetest/stripetest.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Patrick Read (M86LE6U52M)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -456,7 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = stripetest/stripetest.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Patrick Read (M86LE6U52M)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = stripetest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
